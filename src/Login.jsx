@@ -49,7 +49,7 @@ export default class Login extends Component {
               <h4 style={{display:'block'}}>Let Us know your level of interest in this location:</h4>
               </Row>
               <Row>
-              <FormSelect style={{width:250}} options={['Today!!', 'Tomorrow', 'This Week', 'Some time Soonish']} firstOption="Select" onChange={this.handleSelect} />
+              <FormSelect style={{width:250}} options={[{'label': 'Today', 'value': 'TODAY!!!'}, {'label': 'Tomorrow', 'value':'Right?!'}]} firstOption="Select" onChange={this.handleSelect} />
               </Row>
               <Row>
                 <Col style={{textAlign:'Center', margin: '0 0 10px 0'}}>

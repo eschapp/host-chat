@@ -1,6 +1,6 @@
 //Depencecies & Node Packages
 import React, {Component} from 'react';
-import { Button, Alert, Spinner, Row, Col, Form, FormField, FormInput } from 'elemental';
+import { Button, Alert, Checkbox, Spinner, Row, Col, Form, FormField, FormInput } from 'elemental';
 
 
 const chatContainerStyle = {
@@ -35,7 +35,7 @@ export default class Chat extends Component {
                   </Col>
                   <Col sm="1/2">
                     <div style={{width:'100%',height:200, padding:10, background:'whitesmoke'}}>
-                      Host says what?
+                      Host is who?
                     </div>
                   </Col>
                 </Row>
@@ -66,6 +66,9 @@ export default class Chat extends Component {
 
             <div style={{background:'blue', color:'white', height:80, padding:10, margin:10}}>
               <Button style={{float: 'right'}} size="lg" href="">Send New Message</Button>
+              <FormField>
+                <Checkbox label="Urgent" />
+              </FormField>
             </div>
 
         </div>
