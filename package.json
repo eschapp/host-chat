@@ -1,7 +1,7 @@
 {
-  "name": "react-elemental-example",
+  "name": "host_chat",
   "version": "1.0.0",
-  "description": "An example of using Elemental UI in a React/Webpack Application",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jimthedev/react-elemental-example.git"
+    "url": ""
   },
   "keywords": [],
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jimthedev/react-elemental-example/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/jimthedev/react-elemental-example#readme",
+  "homepage": "",
   "dependencies": {
     "aphrodite": "^0.5.0",
     "elemental": "^0.6.0",
