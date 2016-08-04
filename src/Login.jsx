@@ -2,6 +2,9 @@
 import React, {Component} from 'react';
 import { Button, Alert, Spinner, Row, Col, Form, FormField, FormInput, FormSelect } from 'elemental';
 
+//Components
+import VicinityMap from './VicinityMap.jsx';
+
 const loginStyle = {
   backgroundColor: '#fff',
   border: '2px solid #dedede',
@@ -20,8 +23,8 @@ export default class Login extends Component {
           <h1 style={{textAlign:'center'}}>Host Chat</h1>
           <div style={loginStyle}>
             <div style={{ margin:'0 0 15px 0'}}>
-              <div style={{width:'100%',height:'200px',background:'lightgreen'}}>
-                Vicinity Map
+              <div style={{width:'100%',height:'200px',background:'lightgreen', overflow:'hidden'}}>
+                <VicinityMap />
               </div>
               <div style={{height:50,background:'green'}}>
                 Host Info/Post Info
@@ -46,10 +49,10 @@ export default class Login extends Component {
                 </Col>
               </Row>
               <Row>
-              <h4 style={{display:'block'}}>Let Us know your level of interest in this location:</h4>
+              <h4 style={{display:'block', margin:'0 0 5px 10px'}}>Let Us know your level of interest in this location:</h4>
               </Row>
               <Row>
-              <FormSelect style={{width:250}} options={[{'label': 'Today', 'value': 'TODAY!!!'}, {'label': 'Tomorrow', 'value':'Right?!'}]} firstOption="Select" onChange={this.handleSelect} />
+              <FormSelect style={{width:250, margin:'0 0 10px 10px'}} options={[{'label': 'Today', 'value': 'TODAY!!!'}, {'label': 'Tomorrow', 'value':'Right?!'}]} firstOption="Select" onChange={this.handleSelect} />
               </Row>
               <Row>
                 <Col style={{textAlign:'Center', margin: '0 0 10px 0'}}>
