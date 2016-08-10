@@ -5,10 +5,13 @@
   import elementalStyles from '../node_modules/elemental/less/elemental.less';
   import { Button, Alert, Spinner, Row, Col, Form, FormField, FormInput } from 'elemental';
   import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router';
+  import Horizon from '@horizon/client';
 //Components
   import Login from './Login.jsx';
   import Chat from './Chat.jsx';
   import NoMatch from './NoMatch.jsx';
+  import MessageList from './MessageList.jsx';
+
 
   class App extends Component {
     render() {
