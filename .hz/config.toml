@@ -14,7 +14,7 @@
 # 'secure' will disable HTTPS and use HTTP instead when set to 'false'
 # 'key_file' and 'cert_file' are required for serving HTTPS
 #------------------------------------------------------------------------------
-secure = false
+# secure = true
 # key_file = "horizon-key.pem"
 # cert_file = "horizon-cert.pem"
 
@@ -26,7 +26,7 @@ secure = false
 # 'serve_static' will serve files from the given directory over HTTP/HTTPS
 #------------------------------------------------------------------------------
 project_name = "host_chat"
-serve_static = "public"
+# serve_static = "dist"
 
 
 ###############################################################################
@@ -38,8 +38,8 @@ serve_static = "public"
 # 'auto_create_collection' creates a collection when one is needed but does not exist
 # 'auto_create_index' creates an index when one is needed but does not exist
 #------------------------------------------------------------------------------
-auto_create_collection = false
-auto_create_index = false
+# auto_create_collection = false
+# auto_create_index = false
 
 
 ###############################################################################
@@ -68,7 +68,7 @@ auto_create_index = false
 # 'allow_unauthenticated' allows connections that are not tied to a user id
 # 'auth_redirect' specifies where users will be redirected to after login
 #------------------------------------------------------------------------------
-token_secret = "YSuhVcZpWt2H7dzXVB6wjSpk397xH/qOcfc8JL4R+I56T/EdH4gFGtCG6PPhrIgcbx1Bi9lOYOWzsifUg9lYJA=="
+token_secret = "qVO1B9XCNhv6Hp4THtCQZfiHJrf8pRw6NtRJqSGDNa45tuMJ+xepIRfo2/PCtOLdkUyXHgp1CZxW5a+cuYtvEw=="
 # allow_anonymous = false
 # allow_unauthenticated = false
 # auth_redirect = "/"
