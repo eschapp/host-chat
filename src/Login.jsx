@@ -1,5 +1,6 @@
 //Depencecies & Node Packages
 import React, {Component} from 'react';
+import { browserHistory } from 'react-router';
 import { Button, Alert, Spinner, Row, Col, Form, FormField, FormInput, FormSelect } from 'elemental';
 
 //Components
@@ -16,7 +17,39 @@ const loginStyle = {
   width: '50%'
 };
 
+var timeline = [{'label': 'Today', 'value': 'TODAY!!!'}, {'label': 'Tomorrow', 'value':'Right?!'}]
+
 export default class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userName:"",
+      userEmail:"",
+      userPostalCode:"",
+      timeline:""
+    }
+  }
+
+  handleNameChange(e) {
+    this.setState({userName: e.target.value});
+  }
+
+  handleEmailChange(e) {
+    this.setState({userEmail: e.target.value});
+  }
+
+  handlePostCodeChange(e) {
+    this.setState({userPostalCode: e.target.value});
+  }
+  handleTimelineSelect(timeline) {
+    this.setState({userTimeline: timeline});
+  }
+
+  onLoginSubmit(e) {
+    e.preventDefault()
+    browserHistory.push('/chat/' + this.state.userName)
+  }
+
     render() {
       return (
         <div>
@@ -30,21 +63,21 @@ export default class Login extends Component {
                 Host Info/Post Info
               </div>
             </div>
-            <Form type="inline">
+            <Form onSubmit={this.onLoginSubmit.bind(this)} type="inline">
               <Row>
                 <Col sm="1/3">
-                  <FormField label="Email address" htmlFor="inline-form-input-email">
-                    <FormInput type="email" placeholder="Enter email" name="inline-form-input-email" />
+                  <FormField label="Name" htmlFor="inline-form-input-text">
+                    <FormInput onChange={this.handleNameChange.bind(this)} type="text" placeholder="Enter name" name="inline-form-input-text" />
                   </FormField>
                 </Col>
                 <Col sm="1/3">
-                  <FormField label="Name" htmlFor="inline-form-input-text">
-                    <FormInput type="text" placeholder="Enter name" name="inline-form-input-text" />
+                  <FormField label="Email address" htmlFor="inline-form-input-email">
+                    <FormInput onChange={this.handleEmailChange.bind(this)} type="email" placeholder="Enter email" name="inline-form-input-email" />
                   </FormField>
                 </Col>
                 <Col sm="1/3">
                   <FormField label="Postal code" htmlFor="postal-code">
-                    <FormInput type="text" placeholder="Postal code" name="postal-code" />
+                    <FormInput onChange={this.handlePostCodeChange.bind(this)} type="text" placeholder="Postal code" name="postal-code" />
                   </FormField>
                 </Col>
               </Row>
@@ -52,11 +85,13 @@ export default class Login extends Component {
               <h4 style={{display:'block', margin:'0 0 5px 10px'}}>Let Us know your level of interest in this location:</h4>
               </Row>
               <Row>
-              <FormSelect style={{width:250, margin:'0 0 10px 10px'}} options={[{'label': 'Today', 'value': 'TODAY!!!'}, {'label': 'Tomorrow', 'value':'Right?!'}]} firstOption="Select" onChange={this.handleSelect} />
+                <FormField label="timeline">
+                <FormSelect style={{width:250, margin:'0 0 10px 10px'}} options={timeline} firstOption="Select" onChange={this.handleTimelineSelect.bind(this)} />
+                </FormField>
               </Row>
               <Row>
                 <Col style={{textAlign:'Center', margin: '0 0 10px 0'}}>
-                  <Button size="lg" href={"chat"}>Chat with the Host</Button>
+                  <Button size="lg" href={"chat"} submit >Chat with the Host</Button>
                 </Col>
               </Row>
             </Form>
