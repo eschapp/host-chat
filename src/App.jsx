@@ -11,6 +11,7 @@
   import Chat from './Chat.jsx';
   import NoMatch from './NoMatch.jsx';
   import MessageList from './MessageList.jsx';
+  import {chat} from './stores.jsx';
 
 
   class App extends Component {

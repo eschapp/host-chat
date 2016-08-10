@@ -13,7 +13,7 @@ export default class MessageList extends Component {
       messages: []
     };
 
-    this.props.chat.watch().subscribe((result) => {
+    this.props.chat.watch().subscribe((results) => {
       this.setState({messages: result});
       })
     }
@@ -29,6 +29,7 @@ export default class MessageList extends Component {
             </div>
           );
         })}
+          <Message />
         </div>
       );
     }

@@ -47,7 +47,7 @@ export default class Login extends Component {
 
   onLoginSubmit(e) {
     e.preventDefault()
-    browserHistory.push('/chat/' + this.state.userName)
+    browserHistory.push('/chat')
   }
 
     render() {

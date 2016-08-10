@@ -65,7 +65,7 @@ export default class Chat extends Component {
               </div>
                   <div style={{background: 'whitesmoke', padding:10, margin:10}}>
                     <Col>
-                      <MessageList username={this.props.params.usernName} messages={this.state.messages}/>
+                      <MessageList />
                     </Col>
                   </div>
             </div>
