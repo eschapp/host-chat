@@ -75,7 +75,6 @@ export default class Chat extends Component {
                 <FormInput style={{margin:'0 10px 10px 10px'}} placeholder="Textarea" multiline />
               </Row>
               <Row>
-                <FormSelect style={{width:250, margin:'0 10px 10px 10px'}} options={[{'label': 'Location Question', 'value': 'Location Question'}, {'label': 'Rules Question', 'value':'Rules Question'}, {'label': 'General Question', 'value':'General Question'}]} firstOption="Select" onChange={this.handleSelect.bind(this)} />
                 <FormField>
                   <Checkbox label="Urgent" />
                 </FormField>
