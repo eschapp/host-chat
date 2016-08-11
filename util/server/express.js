@@ -31,7 +31,7 @@ const options = {
   },
   //secure: true,
   permissions: false,
-  project_name: 'react_webpack_horizon',
+  project_name: 'airchair',
   rdb_host: urlRethinkDB.hostname,
   rdb_port: urlRethinkDB.port
 };
