@@ -1,7 +1,0 @@
-# This is a TOML document
-
-[collections.messages]
-
-[groups.admin]
-[groups.admin.rules.carte_blanche]
-template = "any()"
