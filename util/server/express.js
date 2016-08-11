@@ -25,7 +25,7 @@ var urlRethinkDB = url.parse(process.env.RETHINKDB_URL);
 
 const options = {
   auth: {
-    token_secret: 'my_super_secret_secret',
+    token_secret: 'hotdogtime',
     allow_anonymous: true,
     allow_unauthenticated: true
   },
